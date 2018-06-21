@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SortingAlgorithms
+﻿public class SelectionSort
 {
-    public class SelectionSort
+    public void Sort(ref int[] array)
     {
-        public void Sort(int[] array)
-        {
-            //sort here
-        }
+        //sort here
     }
 }
+

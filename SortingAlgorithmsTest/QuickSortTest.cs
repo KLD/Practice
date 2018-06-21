@@ -19,7 +19,7 @@ namespace SortingAlgorithmsTest
 
             //act
             int[] actual = (int[]) toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
             //assert
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual),
@@ -35,7 +35,7 @@ namespace SortingAlgorithmsTest
 
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
         }
@@ -48,7 +48,7 @@ namespace SortingAlgorithmsTest
 
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
@@ -62,7 +62,7 @@ namespace SortingAlgorithmsTest
 
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
@@ -76,7 +76,7 @@ namespace SortingAlgorithmsTest
 
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
@@ -90,7 +90,7 @@ namespace SortingAlgorithmsTest
 
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
         }
@@ -102,7 +102,7 @@ namespace SortingAlgorithmsTest
             int[] expected = { -3,-2, -1 };
 
             int[] actual = (int[])toSort.Clone();
-            selection.Sort(actual);
+            selection.Sort(ref actual);
 
             Assert.IsTrue(KLD.AreEqualArrays(expected, actual), $"\nFailed to sort: {KLD.ats(toSort)}.\nExpected: {KLD.ats(expected)} got: {KLD.ats(actual)}");
         }
