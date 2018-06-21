@@ -4,9 +4,9 @@ using SortingAlgorithms;
 namespace SortingAlgorithmsTest
 {
     [TestClass]
-    public class SelectionSortTest
+    public class InsertionSortTest
     {
-        private SelectionSort selection = new SelectionSort();
+        private InsertionSort selection = new InsertionSort();
 
         [TestMethod]
         public void ShouldSortArray_ThreeElements()

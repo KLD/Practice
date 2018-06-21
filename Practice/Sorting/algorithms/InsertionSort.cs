@@ -1,4 +1,4 @@
-﻿public class SelectionSort
+﻿public class InsertionSort
 {
     public void Sort(ref int[] array)
     {

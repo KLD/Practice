@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace SortingAlgorithmsTest
+namespace SortingAlgorithms
 {
     public class KLD
     {
@@ -24,9 +25,9 @@ namespace SortingAlgorithmsTest
             {
                 n--;
                 int k = rng.Next(n + 1);
-                int value = list[k];
-                list[k] = list[n];
-                list[n] = value;
+                int value = copy[k];
+                copy[k] = copy[n];
+                copy[n] = value;
             }
 
             return copy;
@@ -58,6 +59,24 @@ namespace SortingAlgorithmsTest
             return buld + "]";
         }
 
+        public static int[] OneMillion
+        {
+            get
+            {
+                return ShuffleAndClone(Generate(1000000));
+            }
+        }
 
+        private static Stopwatch Timer = Stopwatch.StartNew();
+        public static void StartTimer()
+        {
+            Timer.Restart();
+        }
+
+        public static void StopTimer()
+        {
+            Console.WriteLine("Time elapsed: " + Timer.Elapsed.TotalSeconds.ToString("0.00") + "s");
+            Timer.Stop();
+        }
     }
 }
